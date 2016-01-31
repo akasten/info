@@ -1,0 +1,528 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl#"
+     xml:base="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl">
+        <owl:versionIRI rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/0.1/lkif_mapping.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-extended.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#AlteredNorm -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#AlteredNorm">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Norm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Norm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingAgent -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingAgent">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/legal-role.owl#Legal_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingSystem -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#TechnicalSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#TechnicalSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingType -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingType">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl#ContentConsumingAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl#ContentConsumingAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingAgent -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingAgent">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/legal-role.owl#Legal_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingSystem -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#TechnicalSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#TechnicalSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingType -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingType">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl#ContentProvidingAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl#ContentProvidingAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Norm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationAct -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationAct">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Act_of_Law"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationNorm -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationNorm">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Right"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationType -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationType">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationAct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationAct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#Legislator -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#Legislator">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/legal-role.owl#Legal_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Legislative_Body"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Legislative_Body"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#PermittingFlowRegulationNorm -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#PermittingFlowRegulationNorm">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Permission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ProhibitingFlowRegulationNorm -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ProhibitingFlowRegulationNorm">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Prohibition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#RegulatedContent -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#RegulatedContent">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#RegulatedTopic -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#RegulatedTopic">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl#ContentConsumingAction -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl#ContentConsumingAction">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Action"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#Agent"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#plays"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingAgent"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#TechnicalSystem"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#plays"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingSystem"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl#ContentProvidingAction -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/lkif_mapping.owl#ContentProvidingAction">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Action"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#TechnicalSystem"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#plays"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingSystem"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#Agent"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#plays"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingAgent"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductCreator -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductCreator">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Social_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductDescription -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductDescription">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Norm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.estrellaproject.org/lkif-core/expression.owl#bears"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.estrellaproject.org/lkif-core/expression.owl#bears"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductText -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductText">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Code_of_Conduct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/expression.owl#bears"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/expression.owl#bears"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#LegalFoundation -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#LegalFoundation">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Norm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#context"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#CodeOfConductDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Norm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#TechnicalSystem -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#TechnicalSystem">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#Physical_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#Topic -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#Topic"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

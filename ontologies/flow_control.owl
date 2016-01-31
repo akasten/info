@@ -1,0 +1,1248 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DUL "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#" >
+    <!ENTITY ontopic "http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#" >
+    <!ENTITY legal_regulation "http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#" >
+    <!ENTITY NormativePositions "http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#" >
+    <!ENTITY technical_regulation "http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#" >
+    <!ENTITY organizational_regulation "http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#"
+     xml:base="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl"
+     xmlns:technical_regulation="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:NormativePositions="http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:legal_regulation="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#"
+     xmlns:organizational_regulation="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl#"
+     xmlns:ontopic="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#">
+    <owl:Ontology rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
+        <owl:priorVersion>http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control-0.1.owl</owl:priorVersion>
+        <owl:imports rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl"/>
+        <owl:imports rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/organizational_regulation.owl"/>
+        <owl:imports rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl"/>
+        <owl:versionIRI rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/0.3/flow_control.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#isSpecifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#isSpecifiedBy">
+        <owl:inverseOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+        <rdfs:range rdf:resource="&DUL;Parameter"/>
+        <rdfs:domain rdf:resource="&DUL;Role"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies -->
+
+    <owl:ObjectProperty rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies">
+        <rdfs:domain rdf:resource="&DUL;Parameter"/>
+        <rdfs:range rdf:resource="&DUL;Role"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;isParameterFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#AllowingFlowControlRuleMethod -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#AllowingFlowControlRuleMethod">
+        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#AllowingFlowControlRuleSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#AllowingFlowControlRuleSituation -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#AllowingFlowControlRuleSituation">
+        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#AllowingFlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#AllowingFlowControlRuleMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#BlockingFlowControlRuleMethod -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#BlockingFlowControlRuleMethod">
+        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#BlockingFlowControlRuleSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#BlockingFlowControlRuleSituation -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#BlockingFlowControlRuleSituation">
+        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#BlockingFlowControlRuleMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#BlockingFlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelRole -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:someValuesFrom rdf:resource="&DUL;Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&DUL;Object"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#isSpecifiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelSpecifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelSpecifier -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelSpecifier">
+        <rdfs:subClassOf rdf:resource="&DUL;Parameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:someValuesFrom rdf:resource="&DUL;Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelRole"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentRole -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#isSpecifiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentSpecifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;InformationRealization"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;realizes"/>
+                                <owl:someValuesFrom rdf:resource="&DUL;InformationObject"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;InformationRealization"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;realizes"/>
+                                <owl:someValuesFrom rdf:resource="&DUL;InformationObject"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentSpecifier -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentSpecifier">
+        <rdfs:subClassOf rdf:resource="&DUL;Parameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentRole"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:someValuesFrom rdf:resource="&DUL;Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentTransmissionType -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentTransmissionType">
+        <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:onClass rdf:resource="&DUL;Event"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ControlledTopic -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ControlledTopic">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&ontopic;Topic"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="&ontopic;Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleMethod -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleMethod">
+        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleSituation -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleSituation">
+        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#EvaluateRuleTargetSpecifityAlgorithm -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#EvaluateRuleTargetSpecifityAlgorithm">
+        <rdfs:subClassOf rdf:resource="&technical_regulation;RulePriorityAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlMetaPolicyMethod -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlMetaPolicyMethod">
+        <rdfs:subClassOf rdf:resource="&technical_regulation;ControlMetaPolicyMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicyMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlMetaPolicySituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicyMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlMetaPolicySituation -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlMetaPolicySituation">
+        <rdfs:subClassOf rdf:resource="&technical_regulation;ControlMetaPolicySituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlMetaPolicyMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlMetaPolicyMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicyMethod -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicyMethod">
+        <rdfs:subClassOf rdf:resource="&technical_regulation;ControlPolicyMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isMemberOf"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlMetaPolicyMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isMemberOf"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlMetaPolicyMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesRole"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&technical_regulation;LegalAuthorization"/>
+                            <rdf:Description rdf:about="&technical_regulation;OrganizationalMotivation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicySituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicySituation -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicySituation">
+        <rdfs:subClassOf rdf:resource="&technical_regulation;ControlPolicySituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicyMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicyMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod">
+        <rdfs:subClassOf rdf:resource="&technical_regulation;ControlRuleMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesRole"/>
+                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ControlledTopic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesRole"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverRole"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelSpecifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverSpecifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isMemberOf"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicyMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderSpecifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesRole"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelRole"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentSpecifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesRole"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentRole"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesRole"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderRole"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isMemberOf"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlPolicyMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleSituation -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleSituation">
+        <rdfs:subClassOf rdf:resource="&technical_regulation;ControlRuleSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Region"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentSpecifier"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;InformationRealization"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;hasRole"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ContentRole"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesAgent"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&technical_regulation;TechnicalSystem"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;hasRole"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderRole"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Region"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderSpecifier"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:someValuesFrom rdf:resource="&ontopic;Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Region"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelSpecifier"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesAgent"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&technical_regulation;TechnicalSystem"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;hasRole"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverRole"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesObject"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Object"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;hasRole"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ChannelRole"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Region"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverSpecifier"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverRole -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&technical_regulation;TechnicalSystem"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="&technical_regulation;TechnicalSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#isSpecifiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverSpecifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverSpecifier -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverSpecifier">
+        <rdfs:subClassOf rdf:resource="&DUL;Parameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:someValuesFrom rdf:resource="&DUL;Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReceiverRole"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleMethod -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleMethod">
+        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetSpecifier"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesRole"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetRole"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleSituation -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleSituation">
+        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Region"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetSpecifier"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesAgent"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&technical_regulation;TechnicalSystem"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;hasRole"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetRole"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetRole -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="&technical_regulation;TechnicalSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#isSpecifiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetSpecifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&technical_regulation;TechnicalSystem"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetSpecifier -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetSpecifier">
+        <rdfs:subClassOf rdf:resource="&DUL;Parameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:onClass rdf:resource="&DUL;Region"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetRole"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectionTargetRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetRole -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacingFlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#isSpecifiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetSpecifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&DUL;InformationObject"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="&DUL;InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetSpecifier -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetSpecifier">
+        <rdfs:subClassOf rdf:resource="&DUL;Parameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacingFlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:onClass rdf:resource="&DUL;Region"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetRole"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacingFlowControlRuleMethod -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacingFlowControlRuleMethod">
+        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacingFlowControlRuleSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetSpecifier"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesRole"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetRole"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacingFlowControlRuleSituation -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacingFlowControlRuleSituation">
+        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#DenyingFlowControlRuleSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Region"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetSpecifier"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacingFlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;InformationRealization"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;hasRole"/>
+                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacementTargetRole"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#ReplacingFlowControlRuleMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderRole -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&technical_regulation;TechnicalSystem"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:someValuesFrom rdf:resource="&technical_regulation;TechnicalSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#isSpecifiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderSpecifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderSpecifier -->
+
+    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderSpecifier">
+        <rdfs:subClassOf rdf:resource="&DUL;Parameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#specifies"/>
+                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#SenderRole"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:someValuesFrom rdf:resource="&DUL;Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#FlowControlRuleMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,621 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DUL "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#" >
+    <!ENTITY ontopic "http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#" >
+    <!ENTITY LegalILI "http://www.ontologydesignpatterns.org/ont/dul/CLO/LegalILI.owl#" >
+    <!ENTITY legal_regulation "http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#" >
+    <!ENTITY NormativePositions "http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#" >
+    <!ENTITY technical_regulation "http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#"
+     xml:base="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl"
+     xmlns:technical_regulation="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:NormativePositions="http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#"
+     xmlns:LegalILI="http://www.ontologydesignpatterns.org/ont/dul/CLO/LegalILI.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:legal_regulation="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#"
+     xmlns:ontopic="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#">
+    <owl:Ontology rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/0.3/legal_regulation.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#priorVersion -->
+
+    <owl:AnnotationProperty rdf:about="&owl;priorVersion"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#isDutyTargetOf -->
+
+    <owl:ObjectProperty rdf:about="&NormativePositions;isDutyTargetOf"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#isPowerTargetOf -->
+
+    <owl:ObjectProperty rdf:about="&NormativePositions;isPowerTargetOf"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&DUL;defines"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole -->
+
+    <owl:ObjectProperty rdf:about="&DUL;definesRole"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask -->
+
+    <owl:ObjectProperty rdf:about="&DUL;definesTask"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasComponent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasRole"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent -->
+
+    <owl:ObjectProperty rdf:about="&DUL;includesAgent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="&DUL;includesEvent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject -->
+
+    <owl:ObjectProperty rdf:about="&DUL;includesObject"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isClassifiedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isComponentOf"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConceptUsedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isConceptUsedIn"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDefinedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isDefinedIn"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isRoleOf"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSatisfiedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSettingFor"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTaskOf -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isTaskOf"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes -->
+
+    <owl:ObjectProperty rdf:about="&DUL;realizes"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;satisfies"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#usesConcept -->
+
+    <owl:ObjectProperty rdf:about="&DUL;usesConcept"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#AddedNorm -->
+
+    <owl:Class rdf:about="&legal_regulation;AddedNorm">
+        <rdfs:subClassOf rdf:resource="&legal_regulation;AlteredNorm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#AlteredNorm -->
+
+    <owl:Class rdf:about="&legal_regulation;AlteredNorm">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&legal_regulation;AddedNorm"/>
+                    <rdf:Description rdf:about="&legal_regulation;DeletedNorm"/>
+                    <rdf:Description rdf:about="&legal_regulation;UpdatedNorm"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&DUL;Description"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingAgent -->
+
+    <owl:Class rdf:about="&legal_regulation;ContentConsumingAgent">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&DUL;SocialAgent"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingSystem -->
+
+    <owl:Class rdf:about="&legal_regulation;ContentConsumingSystem">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="&technical_regulation;TechnicalSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&technical_regulation;TechnicalSystem"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingType -->
+
+    <owl:Class rdf:about="&legal_regulation;ContentConsumingType">
+        <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:onClass rdf:resource="&DUL;Event"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingAgent -->
+
+    <owl:Class rdf:about="&legal_regulation;ContentProvidingAgent">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&DUL;SocialAgent"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingSystem -->
+
+    <owl:Class rdf:about="&legal_regulation;ContentProvidingSystem">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="&technical_regulation;TechnicalSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&technical_regulation;TechnicalSystem"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingType -->
+
+    <owl:Class rdf:about="&legal_regulation;ContentProvidingType">
+        <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:onClass rdf:resource="&DUL;Event"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentTransmissionType -->
+
+    <owl:Class rdf:about="&legal_regulation;ContentTransmissionType">
+        <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:onClass rdf:resource="&DUL;Event"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&DUL;Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#DeletedNorm -->
+
+    <owl:Class rdf:about="&legal_regulation;DeletedNorm">
+        <rdfs:subClassOf rdf:resource="&legal_regulation;AlteredNorm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm -->
+
+    <owl:Class rdf:about="&legal_regulation;FlowRegulationNorm">
+        <rdfs:subClassOf rdf:resource="&DUL;Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="&legal_regulation;ContentProvidingSystem"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:someValuesFrom rdf:resource="&legal_regulation;RegulatedTopic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="&legal_regulation;ContentConsumingSystem"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="&legal_regulation;ContentConsumingAgent"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="&legal_regulation;ContentProvidingAgent"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:someValuesFrom rdf:resource="&legal_regulation;RegulatedContent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationAct -->
+
+    <owl:Class rdf:about="&legal_regulation;LegislationAct">
+        <rdfs:subClassOf rdf:resource="&DUL;Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="&DUL;Description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="&DUL;SocialAgent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationNorm -->
+
+    <owl:Class rdf:about="&legal_regulation;LegislationNorm">
+        <rdfs:subClassOf rdf:resource="&DUL;Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesRole"/>
+                <owl:someValuesFrom rdf:resource="&legal_regulation;AlteredNorm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesRole"/>
+                <owl:onClass rdf:resource="&legal_regulation;Legislator"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;definesTask"/>
+                <owl:onClass rdf:resource="&legal_regulation;LegislationType"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationType -->
+
+    <owl:Class rdf:about="&legal_regulation;LegislationType">
+        <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:onClass rdf:resource="&legal_regulation;LegislationAct"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&legal_regulation;LegislationAct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#Legislator -->
+
+    <owl:Class rdf:about="&legal_regulation;Legislator">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&DUL;SocialAgent"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#PermittingFlowRegulationNorm -->
+
+    <owl:Class rdf:about="&legal_regulation;PermittingFlowRegulationNorm">
+        <rdfs:subClassOf rdf:resource="&legal_regulation;FlowRegulationNorm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ProhibitingFlowRegulationNorm -->
+
+    <owl:Class rdf:about="&legal_regulation;ProhibitingFlowRegulationNorm">
+        <rdfs:subClassOf rdf:resource="&legal_regulation;FlowRegulationNorm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#RegulatedContent -->
+
+    <owl:Class rdf:about="&legal_regulation;RegulatedContent">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&DUL;InformationObject"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="&DUL;InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#RegulatedTopic -->
+
+    <owl:Class rdf:about="&legal_regulation;RegulatedTopic">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="&ontopic;Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isRoleOf"/>
+                <owl:onClass rdf:resource="&ontopic;Topic"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#UpdatedNorm -->
+
+    <owl:Class rdf:about="&legal_regulation;UpdatedNorm">
+        <rdfs:subClassOf rdf:resource="&legal_regulation;AlteredNorm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#TechnicalSystem -->
+
+    <owl:Class rdf:about="&technical_regulation;TechnicalSystem"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&legal_regulation;AddedNorm"/>
+            <rdf:Description rdf:about="&legal_regulation;DeletedNorm"/>
+            <rdf:Description rdf:about="&legal_regulation;UpdatedNorm"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
