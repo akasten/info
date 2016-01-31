@@ -1,3 +1,5 @@
-# InFO: A Flow Control Ontology
+# InFO: An Information Flow Ontology
 
-Here needs to be a description.
+The Information Flow Ontology (InFO) is a generic policy language for regulating information flow in open and distributed networks such as the Internet. Regulations expressed with the InFO policy language can be enforced by various communication nodes operating on different levels of the OSI reference model such as the Internet layer or the application layer. Example nodes which are natively supported by InFO as enforcing systems are routers, application-level proxy servers, and name servers. However, InFO's generic language model can also be further refined to support other types of communication nodes as well.
+
+An InFO policy consists of multiple rules which share the same purpose. Each rule regulates one particular communication flow and provides several technical regulation details for implementing the regulation on an enforcing node. The purpose of a policy is expressed with human-readable background information which is embedded directly into the policy. This allows for an easy comparison between different policies and for checking whether or not a policy implements the correct high-level regulation. The provided background information covers a regulation's legal foundation and its organizational motivation.
