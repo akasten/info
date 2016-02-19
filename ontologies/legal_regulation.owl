@@ -9,15 +9,15 @@
     <!ENTITY DUL "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#" >
     <!ENTITY ontopic "http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#" >
     <!ENTITY LegalILI "http://www.ontologydesignpatterns.org/ont/dul/CLO/LegalILI.owl#" >
-    <!ENTITY legal_regulation "http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#" >
+    <!ENTITY legal_regulation "https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#" >
     <!ENTITY NormativePositions "http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#" >
-    <!ENTITY technical_regulation "http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#" >
+    <!ENTITY technical_regulation "https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#"
-     xml:base="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl"
-     xmlns:technical_regulation="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#"
+<rdf:RDF xmlns="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#"
+     xml:base="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl"
+     xmlns:technical_regulation="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:NormativePositions="http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#"
@@ -25,11 +25,11 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-     xmlns:legal_regulation="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#"
+     xmlns:legal_regulation="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#"
      xmlns:ontopic="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#">
-    <owl:Ontology rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl">
+    <owl:Ontology rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl">
         <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
-        <owl:versionIRI rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/0.3/legal_regulation.owl"/>
+        <owl:versionIRI rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/legal_regulation.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl"/>
     </owl:Ontology>
     
@@ -212,7 +212,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#AddedNorm -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#AddedNorm -->
 
     <owl:Class rdf:about="&legal_regulation;AddedNorm">
         <rdfs:subClassOf rdf:resource="&legal_regulation;AlteredNorm"/>
@@ -220,7 +220,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#AlteredNorm -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#AlteredNorm -->
 
     <owl:Class rdf:about="&legal_regulation;AlteredNorm">
         <owl:equivalentClass>
@@ -250,7 +250,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingAgent -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingAgent -->
 
     <owl:Class rdf:about="&legal_regulation;ContentConsumingAgent">
         <rdfs:subClassOf rdf:resource="&DUL;Role"/>
@@ -265,7 +265,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingSystem -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingSystem -->
 
     <owl:Class rdf:about="&legal_regulation;ContentConsumingSystem">
         <rdfs:subClassOf rdf:resource="&DUL;Role"/>
@@ -286,7 +286,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentConsumingType -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingType -->
 
     <owl:Class rdf:about="&legal_regulation;ContentConsumingType">
         <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
@@ -307,7 +307,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingAgent -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingAgent -->
 
     <owl:Class rdf:about="&legal_regulation;ContentProvidingAgent">
         <rdfs:subClassOf rdf:resource="&DUL;Role"/>
@@ -322,7 +322,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingSystem -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingSystem -->
 
     <owl:Class rdf:about="&legal_regulation;ContentProvidingSystem">
         <rdfs:subClassOf rdf:resource="&DUL;Role"/>
@@ -343,7 +343,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentProvidingType -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingType -->
 
     <owl:Class rdf:about="&legal_regulation;ContentProvidingType">
         <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
@@ -364,7 +364,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ContentTransmissionType -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentTransmissionType -->
 
     <owl:Class rdf:about="&legal_regulation;ContentTransmissionType">
         <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
@@ -385,7 +385,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#DeletedNorm -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#DeletedNorm -->
 
     <owl:Class rdf:about="&legal_regulation;DeletedNorm">
         <rdfs:subClassOf rdf:resource="&legal_regulation;AlteredNorm"/>
@@ -393,7 +393,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#FlowRegulationNorm -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#FlowRegulationNorm -->
 
     <owl:Class rdf:about="&legal_regulation;FlowRegulationNorm">
         <rdfs:subClassOf rdf:resource="&DUL;Description"/>
@@ -441,7 +441,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationAct -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationAct -->
 
     <owl:Class rdf:about="&legal_regulation;LegislationAct">
         <rdfs:subClassOf rdf:resource="&DUL;Event"/>
@@ -461,7 +461,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationNorm -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationNorm -->
 
     <owl:Class rdf:about="&legal_regulation;LegislationNorm">
         <rdfs:subClassOf rdf:resource="&DUL;Description"/>
@@ -489,7 +489,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#LegislationType -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationType -->
 
     <owl:Class rdf:about="&legal_regulation;LegislationType">
         <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
@@ -510,7 +510,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#Legislator -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#Legislator -->
 
     <owl:Class rdf:about="&legal_regulation;Legislator">
         <rdfs:subClassOf rdf:resource="&DUL;Role"/>
@@ -525,7 +525,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#PermittingFlowRegulationNorm -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#PermittingFlowRegulationNorm -->
 
     <owl:Class rdf:about="&legal_regulation;PermittingFlowRegulationNorm">
         <rdfs:subClassOf rdf:resource="&legal_regulation;FlowRegulationNorm"/>
@@ -533,7 +533,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#ProhibitingFlowRegulationNorm -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ProhibitingFlowRegulationNorm -->
 
     <owl:Class rdf:about="&legal_regulation;ProhibitingFlowRegulationNorm">
         <rdfs:subClassOf rdf:resource="&legal_regulation;FlowRegulationNorm"/>
@@ -541,7 +541,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#RegulatedContent -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#RegulatedContent -->
 
     <owl:Class rdf:about="&legal_regulation;RegulatedContent">
         <rdfs:subClassOf rdf:resource="&DUL;Role"/>
@@ -562,7 +562,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#RegulatedTopic -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#RegulatedTopic -->
 
     <owl:Class rdf:about="&legal_regulation;RegulatedTopic">
         <rdfs:subClassOf rdf:resource="&DUL;Role"/>
@@ -583,7 +583,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/legal_regulation.owl#UpdatedNorm -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#UpdatedNorm -->
 
     <owl:Class rdf:about="&legal_regulation;UpdatedNorm">
         <rdfs:subClassOf rdf:resource="&legal_regulation;AlteredNorm"/>
@@ -591,7 +591,7 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#TechnicalSystem -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#TechnicalSystem -->
 
     <owl:Class rdf:about="&technical_regulation;TechnicalSystem"/>
     

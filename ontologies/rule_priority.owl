@@ -9,15 +9,16 @@
 ]>
 
 
-<rdf:RDF xmlns="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/rule_priority.owl#"
-     xml:base="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/rule_priority.owl"
+<rdf:RDF xmlns="https://github.com/akasten/info/blob/master/ontologies/rule_priority.owl#"
+     xml:base="https://github.com/akasten/info/blob/master/ontologies/rule_priority.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/rule_priority.owl">
-        <owl:imports rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl"/>
-        <owl:versionIRI rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/0.3/rule_priority.owl"/>
+    <owl:Ontology rdf:about="https://github.com/akasten/info/blob/master/ontologies/rule_priority.owl">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
+        <owl:imports rdf:resource="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl"/>
+        <owl:versionIRI rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/rule_priority.owl"/>
     </owl:Ontology>
     
 
@@ -33,10 +34,10 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/rule_priority.owl#EvaluateRuleOrderingAlgorithm -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/rule_priority.owl#EvaluateRuleOrderingAlgorithm -->
 
-    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/rule_priority.owl#EvaluateRuleOrderingAlgorithm">
-        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#RulePriorityAlgorithm"/>
+    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/rule_priority.owl#EvaluateRuleOrderingAlgorithm">
+        <rdfs:subClassOf rdf:resource="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#RulePriorityAlgorithm"/>
     </owl:Class>
 </rdf:RDF>
 

@@ -9,15 +9,16 @@
 ]>
 
 
-<rdf:RDF xmlns="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#"
-     xml:base="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl"
+<rdf:RDF xmlns="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#"
+     xml:base="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl">
-        <owl:versionIRI rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/0.1/agedexml_mapping.owl"/>
-        <owl:imports rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/0.3/flow_control.owl"/>
+    <owl:Ontology rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/agedexml_mapping.owl"/>
+        <owl:imports rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/flow_control.owl"/>
     </owl:Ontology>
     
 
@@ -33,10 +34,10 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#hasAgeValue -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#hasAgeValue -->
 
-    <owl:DatatypeProperty rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#hasAgeValue">
-        <rdfs:domain rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeRegion"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#hasAgeValue">
+        <rdfs:domain rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeRegion"/>
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegionDataValue"/>
     </owl:DatatypeProperty>
     
@@ -53,36 +54,49 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeBasedRedirectingMethod -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeBasedRedirectingMethod -->
 
-    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeBasedRedirectingMethod">
-        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleMethod"/>
+    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeBasedRedirectingMethod">
+        <rdfs:subClassOf rdf:resource="https://github.com/akasten/info/blob/master/ontologies/flow_control.owl#RedirectingFlowControlRuleMethod"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy"/>
-                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeBasedRedirectingSituation"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumerSpecifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
-                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumerSpecifier"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeBasedRedirectingSituation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole"/>
-                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumer"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeBasedRedirectingSituation -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeBasedRedirectingSituation -->
 
-    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeBasedRedirectingSituation">
-        <rdfs:subClassOf rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/flow_control.owl#RedirectingFlowControlRuleSituation"/>
+    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeBasedRedirectingSituation">
+        <rdfs:subClassOf rdf:resource="https://github.com/akasten/info/blob/master/ontologies/flow_control.owl#RedirectingFlowControlRuleSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeBasedRedirectingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+                <owl:onClass rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeBasedRedirectingMethod"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent"/>
@@ -92,18 +106,11 @@
                             <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole"/>
-                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumer"/>
+                                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumer"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
-                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeBasedRedirectingMethod"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -112,65 +119,59 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeRegion"/>
+                            <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeRegion"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy"/>
-                                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumerSpecifier"/>
+                                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumerSpecifier"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
-                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeBasedRedirectingMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeLabel -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeLabel -->
 
-    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeLabel">
+    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeLabel">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#Topic"/>
     </owl:Class>
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeQuality -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeQuality -->
 
-    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeQuality">
+    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeQuality">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
-                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeRegion"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
-                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeRegion"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeRegion -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeRegion -->
 
-    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeRegion">
+    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeRegion">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
     </owl:Class>
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumer -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumer -->
 
-    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumer">
+    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumer">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -181,7 +182,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSpecializedBy"/>
-                <owl:allValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumerSpecifier"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumerSpecifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -195,33 +196,33 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumerSpecifier -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumerSpecifier -->
 
-    <owl:Class rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumerSpecifier">
+    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumerSpecifier">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
-                <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#specifies"/>
-                <owl:onClass rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumer"/>
+                <owl:onProperty rdf:resource="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#specifies"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#specifies"/>
+                <owl:onClass rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#ContentConsumer"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/technical_regulation.owl#specifies"/>
-                <owl:someValuesFrom rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#ContentConsumer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
-                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+                <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -239,42 +240,42 @@
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#fsk-ab-0 -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#fsk-ab-0 -->
 
-    <owl:NamedIndividual rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#fsk-ab-0">
-        <rdf:type rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeLabel"/>
+    <owl:NamedIndividual rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#fsk-ab-0">
+        <rdf:type rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeLabel"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#fsk-ab-12 -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#fsk-ab-12 -->
 
-    <owl:NamedIndividual rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#fsk-ab-12">
-        <rdf:type rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeLabel"/>
+    <owl:NamedIndividual rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#fsk-ab-12">
+        <rdf:type rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeLabel"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#fsk-ab-16 -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#fsk-ab-16 -->
 
-    <owl:NamedIndividual rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#fsk-ab-16">
-        <rdf:type rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeLabel"/>
+    <owl:NamedIndividual rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#fsk-ab-16">
+        <rdf:type rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeLabel"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#fsk-ab-18 -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#fsk-ab-18 -->
 
-    <owl:NamedIndividual rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#fsk-ab-18">
-        <rdf:type rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeLabel"/>
+    <owl:NamedIndividual rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#fsk-ab-18">
+        <rdf:type rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeLabel"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#fsk-ab-6 -->
+    <!-- https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#fsk-ab-6 -->
 
-    <owl:NamedIndividual rdf:about="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#fsk-ab-6">
-        <rdf:type rdf:resource="http://icp.it-risk.iwvi.uni-koblenz.de/ontologies/agedexml_mapping.owl#AgeLabel"/>
+    <owl:NamedIndividual rdf:about="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#fsk-ab-6">
+        <rdf:type rdf:resource="https://github.com/akasten/info/blob/master/ontologies/agedexml_mapping.owl#AgeLabel"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
