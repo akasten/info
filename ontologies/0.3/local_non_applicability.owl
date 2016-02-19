@@ -9,16 +9,16 @@
 ]>
 
 
-<rdf:RDF xmlns="https://github.com/akasten/info/blob/master/ontologies/local_non_applicability.owl#"
-     xml:base="https://github.com/akasten/info/blob/master/ontologies/local_non_applicability.owl"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/akasten/info/master/ontologies/local_non_applicability.owl#"
+     xml:base="https://raw.githubusercontent.com/akasten/info/master/ontologies/local_non_applicability.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://github.com/akasten/info/blob/master/ontologies/local_non_applicability.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/local_non_applicability.owl">
         <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
-        <owl:imports rdf:resource="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl"/>
-        <owl:versionIRI rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/local_non_applicability.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/technical_regulation.owl"/>
+        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/0.3/local_non_applicability.owl"/>
     </owl:Ontology>
     
 
@@ -34,10 +34,10 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/local_non_applicability.owl#DiscardNonApplicableRuleAlgorithm -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/local_non_applicability.owl#DiscardNonApplicableRuleAlgorithm -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/local_non_applicability.owl#DiscardNonApplicableRuleAlgorithm">
-        <rdfs:subClassOf rdf:resource="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#LocalNonApplicabilityAlgorithm"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/local_non_applicability.owl#DiscardNonApplicableRuleAlgorithm">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/technical_regulation.owl#LocalNonApplicabilityAlgorithm"/>
     </owl:Class>
 </rdf:RDF>
 

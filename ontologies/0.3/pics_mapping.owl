@@ -9,15 +9,15 @@
 ]>
 
 
-<rdf:RDF xmlns="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#"
-     xml:base="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#"
+     xml:base="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl">
         <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
-        <owl:versionIRI rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/pics_mapping.owl"/>
+        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/0.3/pics_mapping.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl"/>
     </owl:Ontology>
     
@@ -34,43 +34,43 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasPICSRating -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasPICSRating -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasPICSRating">
-        <rdfs:range rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingAttribute"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasPICSRating">
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingAttribute"/>
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasRatingValue -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasRatingValue -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasRatingValue">
-        <rdfs:domain rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingAttribute"/>
-        <rdfs:range rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingValue"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasRatingValue">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingAttribute"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingValue"/>
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#isPICSRatingOf -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#isPICSRatingOf -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#isPICSRatingOf">
-        <rdfs:domain rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingAttribute"/>
-        <owl:inverseOf rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasPICSRating"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#isPICSRatingOf">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingAttribute"/>
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasPICSRating"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isQualityOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#isRatingValueOf -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#isRatingValueOf -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#isRatingValueOf">
-        <rdfs:range rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingAttribute"/>
-        <rdfs:domain rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingValue"/>
-        <owl:inverseOf rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasRatingValue"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#isRatingValueOf">
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingAttribute"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingValue"/>
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasRatingValue"/>
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRegionFor"/>
     </owl:ObjectProperty>
     
@@ -87,10 +87,10 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasValue -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasValue -->
 
-    <owl:DatatypeProperty rdf:about="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasValue">
-        <rdfs:domain rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingValue"/>
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasValue">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingValue"/>
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegionDataValue"/>
     </owl:DatatypeProperty>
     
@@ -107,26 +107,26 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingAttribute -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingAttribute -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingAttribute">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingAttribute">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#isPICSRatingOf"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#isPICSRatingOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasRatingValue"/>
-                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingValue"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasRatingValue"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasRatingValue"/>
-                <owl:onClass rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingValue"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasRatingValue"/>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -134,13 +134,13 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingValue -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingValue -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#PICSRatingValue">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#PICSRatingValue">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/akasten/info/blob/master/ontologies/pics_mapping.owl#hasValue"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/pics_mapping.owl#hasValue"/>
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>

@@ -11,17 +11,17 @@
 ]>
 
 
-<rdf:RDF xmlns="https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl#"
-     xml:base="https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl#"
+     xml:base="https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
      xmlns:ontopic="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#">
-    <owl:Ontology rdf:about="https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl">
         <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
-        <owl:versionIRI rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/rta_mapping.owl"/>
+        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/0.3/rta_mapping.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl"/>
     </owl:Ontology>
     
@@ -38,29 +38,29 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl#pt-1 -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl#pt-1 -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl#pt-1">
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl#pt-1">
         <rdf:type rdf:resource="&ontopic;Topic"/>
-        <ontopic:overlappingTopic rdf:resource="https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl#rtat-1"/>
+        <ontopic:overlappingTopic rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl#rtat-1"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl#rtal-1 -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl#rtal-1 -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl#rtal-1">
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl#rtal-1">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#Word"/>
         <DUL:hasDataValue>RTA-5042-1996-1400-1577-RTA</DUL:hasDataValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl#rtat-1 -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl#rtat-1 -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl#rtat-1">
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl#rtat-1">
         <rdf:type rdf:resource="&ontopic;Topic"/>
-        <DUL:isExpressedBy rdf:resource="https://github.com/akasten/info/blob/master/ontologies/rta_mapping.owl#rtal-1"/>
+        <DUL:isExpressedBy rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/rta_mapping.owl#rtal-1"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

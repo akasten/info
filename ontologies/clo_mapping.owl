@@ -9,17 +9,17 @@
 ]>
 
 
-<rdf:RDF xmlns="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#"
-     xml:base="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#"
+     xml:base="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl">
         <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
-        <owl:versionIRI rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/clo_mapping.owl"/>
-        <owl:imports rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/legal_regulation.owl"/>
-        <owl:imports rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/organizational_regulation.owl"/>
+        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/0.3/clo_mapping.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/0.3/legal_regulation.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/0.3/organizational_regulation.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl"/>
     </owl:Ontology>
     
@@ -36,9 +36,9 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#AlteredLaw -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#AlteredLaw -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#AlteredLaw">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#AlteredLaw">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalRole"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -57,9 +57,9 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#CodeOfConductSituation -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#CodeOfConductSituation -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#CodeOfConductSituation">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#CodeOfConductSituation">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -70,7 +70,7 @@
                             <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole"/>
-                                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#CodeOfConductCreator"/>
+                                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#CodeOfConductCreator"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -80,28 +80,28 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
-                <owl:onClass rdf:resource="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#CodeOfConductDescription"/>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#CodeOfConductDescription"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
-                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#CodeOfConductDescription"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#CodeOfConductDescription"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#ContentTransmissionCase -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#ContentTransmissionCase -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#ContentTransmissionCase">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#ContentTransmissionCase">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalCase"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
-                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -131,13 +131,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#TechnicalSystem"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/technical_regulation.owl#TechnicalSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
-                <owl:onClass rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#FlowRegulationNorm"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -145,58 +145,58 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#FlowRegulationDefinition -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#FlowRegulationDefinition -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#FlowRegulationDefinition">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#FlowRegulationDefinition">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalDefinition"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingAgent"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentProvidingAgent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingSystem"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentProvidingSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingSystem"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentConsumingSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingAgent"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentConsumingAgent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#RegulatedContent"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#RegulatedContent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#RegulatedTopic"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#RegulatedTopic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#LegislationFact -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#LegislationFact -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#LegislationFact">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#LegislationFact">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#InstitutionalFact"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
-                <owl:onClass rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationNorm"/>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#LegislationNorm"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -227,30 +227,30 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
-                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationNorm"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#LegislationNorm"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#LegislationPower -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#LegislationPower -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#LegislationPower">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#LegislationPower">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/LegalILI.owl#InstitutionalPower"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationType"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#LegislationType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#Principle -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#Principle -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#Principle">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#Principle">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Norm"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -261,7 +261,7 @@
                             <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole"/>
-                                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#CodeOfConductCreator"/>
+                                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#CodeOfConductCreator"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -271,16 +271,16 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isMemberOf"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#CodeOfConductDescription"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#CodeOfConductDescription"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#AlteredNorm -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#AlteredNorm -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#AlteredNorm">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#AlteredNorm">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalRole"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -299,9 +299,9 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingAgent -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentConsumingAgent -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingAgent">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentConsumingAgent">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalFunction"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -314,25 +314,25 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingSystem -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentConsumingSystem -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingSystem">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentConsumingSystem">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalRole"/>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingType -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentConsumingType -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingType">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentConsumingType">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalTask"/>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingAgent -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentProvidingAgent -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingAgent">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentProvidingAgent">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalFunction"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -345,112 +345,112 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingSystem -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentProvidingSystem -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingSystem">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentProvidingSystem">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalRole"/>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingType -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentProvidingType -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingType">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentProvidingType">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalTask"/>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentTransmissionType -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentTransmissionType -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentTransmissionType">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentTransmissionType">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalTask"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#isDutyTargetOf"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingSystem"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentProvidingSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#isDutyTargetOf"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingSystem"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentConsumingSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#isObligationTargetOf"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentProvidingAgent"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentProvidingAgent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#isObligationTargetOf"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#ContentConsumingAgent"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#ContentConsumingAgent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#FlowRegulationNorm -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#FlowRegulationNorm -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#FlowRegulationNorm">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#FlowRegulationNorm">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalNorm"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy"/>
-                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#ContentTransmissionCase"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#ContentTransmissionCase"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationNorm -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#LegislationNorm -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationNorm">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#LegislationNorm">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalNorm"/>
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#PowerConferringRule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy"/>
-                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#LegislationFact"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#LegislationFact"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent"/>
-                <owl:onClass rdf:resource="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#LegislationPower"/>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#LegislationPower"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesRole"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#AlteredLaw"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#AlteredLaw"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationType -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#LegislationType -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationType">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#LegislationType">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalTask"/>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#Legislator -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#Legislator -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#Legislator">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#Legislator">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalFunction"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/NormativePositions.owl#hasPowerTowards"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#LegislationType"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#LegislationType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -464,51 +464,51 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#RegulatedContent -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#RegulatedContent -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#RegulatedContent">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#RegulatedContent">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalAsset"/>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#RegulatedTopic -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#RegulatedTopic -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/legal_regulation.owl#RegulatedTopic">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/legal_regulation.owl#RegulatedTopic">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/CLO/CoreLegal.owl#LegalAsset"/>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#CodeOfConductDescription -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#CodeOfConductDescription -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#CodeOfConductDescription">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#CodeOfConductDescription">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember"/>
-                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#Principle"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#Principle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#Principle"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#Principle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy"/>
-                <owl:allValuesFrom rdf:resource="https://github.com/akasten/info/blob/master/ontologies/clo_mapping.owl#CodeOfConductSituation"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/clo_mapping.owl#CodeOfConductSituation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#LegalFoundation -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#LegalFoundation -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#LegalFoundation">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#LegalFoundation">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
@@ -520,9 +520,9 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#TechnicalSystem -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/technical_regulation.owl#TechnicalSystem -->
 
-    <rdf:Description rdf:about="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#TechnicalSystem">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/technical_regulation.owl#TechnicalSystem">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalAgent"/>
     </rdf:Description>
 </rdf:RDF>

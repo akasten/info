@@ -9,12 +9,12 @@
     <!ENTITY DUL "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#" >
     <!ENTITY IOLite "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#" >
     <!ENTITY Conceptualization "http://www.ontologydesignpatterns.org/ont/dul/Conceptualization.owl#" >
-    <!ENTITY organizational_regulation "https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#" >
+    <!ENTITY organizational_regulation "https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#"
-     xml:base="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#"
+     xml:base="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:Conceptualization="http://www.ontologydesignpatterns.org/ont/dul/Conceptualization.owl#"
@@ -22,10 +22,10 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
      xmlns:IOLite="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#"
-     xmlns:organizational_regulation="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#">
-    <owl:Ontology rdf:about="https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl">
+     xmlns:organizational_regulation="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl">
         <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
-        <owl:versionIRI rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/organizational_regulation.owl"/>
+        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/0.3/organizational_regulation.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl"/>
     </owl:Ontology>
@@ -161,7 +161,7 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#CodeOfConductCreator -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#CodeOfConductCreator -->
 
     <owl:Class rdf:about="&organizational_regulation;CodeOfConductCreator">
         <rdfs:subClassOf rdf:resource="&DUL;Role"/>
@@ -176,7 +176,7 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#CodeOfConductDescription -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#CodeOfConductDescription -->
 
     <owl:Class rdf:about="&organizational_regulation;CodeOfConductDescription">
         <rdfs:subClassOf rdf:resource="&DUL;Description"/>
@@ -202,7 +202,7 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#CodeOfConductText -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#CodeOfConductText -->
 
     <owl:Class rdf:about="&organizational_regulation;CodeOfConductText">
         <rdfs:subClassOf rdf:resource="&IOLite;Text"/>
@@ -217,7 +217,7 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/organizational_regulation.owl#LegalFoundation -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/organizational_regulation.owl#LegalFoundation -->
 
     <owl:Class rdf:about="&organizational_regulation;LegalFoundation">
         <rdfs:subClassOf rdf:resource="&DUL;Role"/>

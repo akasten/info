@@ -9,16 +9,16 @@
 ]>
 
 
-<rdf:RDF xmlns="https://github.com/akasten/info/blob/master/ontologies/global_conflict_solution.owl#"
-     xml:base="https://github.com/akasten/info/blob/master/ontologies/global_conflict_solution.owl"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/akasten/info/master/ontologies/global_conflict_solution.owl#"
+     xml:base="https://raw.githubusercontent.com/akasten/info/master/ontologies/global_conflict_solution.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://github.com/akasten/info/blob/master/ontologies/global_conflict_solution.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/global_conflict_solution.owl">
         <owl:versionInfo rdf:datatype="&xsd;decimal">0.3</owl:versionInfo>
-        <owl:imports rdf:resource="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl"/>
-        <owl:versionIRI rdf:resource="https://github.com/akasten/info/blob/master/ontologies/0.3/global_conflict_solution.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/technical_regulation.owl"/>
+        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/0.3/global_conflict_solution.owl"/>
     </owl:Ontology>
     
 
@@ -34,19 +34,19 @@
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/global_conflict_solution.owl#DiscardAffectedPoliciesAlgorithm -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/global_conflict_solution.owl#DiscardAffectedPoliciesAlgorithm -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/global_conflict_solution.owl#DiscardAffectedPoliciesAlgorithm">
-        <rdfs:subClassOf rdf:resource="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#GlobalConflictSolutionAlgorithm"/>
-        <owl:disjointWith rdf:resource="https://github.com/akasten/info/blob/master/ontologies/global_conflict_solution.owl#DiscardAffectedRulesAlgorithm"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/global_conflict_solution.owl#DiscardAffectedPoliciesAlgorithm">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/technical_regulation.owl#GlobalConflictSolutionAlgorithm"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/global_conflict_solution.owl#DiscardAffectedRulesAlgorithm"/>
     </owl:Class>
     
 
 
-    <!-- https://github.com/akasten/info/blob/master/ontologies/global_conflict_solution.owl#DiscardAffectedRulesAlgorithm -->
+    <!-- https://raw.githubusercontent.com/akasten/info/master/ontologies/global_conflict_solution.owl#DiscardAffectedRulesAlgorithm -->
 
-    <owl:Class rdf:about="https://github.com/akasten/info/blob/master/ontologies/global_conflict_solution.owl#DiscardAffectedRulesAlgorithm">
-        <rdfs:subClassOf rdf:resource="https://github.com/akasten/info/blob/master/ontologies/technical_regulation.owl#GlobalConflictSolutionAlgorithm"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/akasten/info/master/ontologies/global_conflict_solution.owl#DiscardAffectedRulesAlgorithm">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/akasten/info/master/ontologies/technical_regulation.owl#GlobalConflictSolutionAlgorithm"/>
     </owl:Class>
 </rdf:RDF>
 
